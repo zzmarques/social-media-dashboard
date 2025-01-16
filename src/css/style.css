@@ -1,0 +1,14 @@
+main {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to top, hsl(0, 0%, 100%) 75%, hsl(225, 100%, 98%) 25%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", serif;
+}
+
+/*# sourceMappingURL=style.css.map */
