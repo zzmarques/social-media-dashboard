@@ -20,7 +20,6 @@
 .cabecalho {
   width: 100%;
   margin-bottom: 10px;
-  border: 1px solid red;
 }
 .cabecalho .container-txt {
   width: 90%;
@@ -54,7 +53,126 @@
 }
 
 .sec1-dashboard {
-  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.sec1-dashboard .card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  width: 90%;
+  height: 240px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background: hsl(227, 47%, 96%);
+}
+.sec1-dashboard .card .container-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.sec1-dashboard .card .container-user img {
+  height: 25px;
+}
+.sec1-dashboard .card .container-user span {
+  font-size: 15px;
+  font-weight: 700;
+  color: hsl(228, 12%, 44%);
+}
+.sec1-dashboard .card .followers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-direction: column;
+}
+.sec1-dashboard .card .followers .qtde-follow {
+  line-height: 60px;
+  font-size: 4em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: hsl(230, 17%, 14%);
+}
+.sec1-dashboard .card .followers .follow {
+  font-weight: 400;
+  letter-spacing: 5px;
+  font-size: 15px;
+  color: hsl(228, 12%, 44%);
+  text-transform: uppercase;
+}
+.sec1-dashboard .card .time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  gap: 8px;
+}
+.sec1-dashboard .card .time img {
+  width: 11px;
+}
+.sec1-dashboard .card .time span {
+  font-size: 15px;
+  font-weight: 700;
+  color: hsl(228, 12%, 44%);
+}
+.sec1-dashboard .card .time .up {
+  color: hsl(163, 72%, 41%);
+}
+.sec1-dashboard .card .time .down {
+  color: hsl(356, 69%, 56%);
+}
+.sec1-dashboard .face::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  z-index: 1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: hsl(208, 92%, 53%);
+}
+.sec1-dashboard .tt::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  z-index: 1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: hsl(203, 89%, 53%);
+}
+.sec1-dashboard .insta::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  z-index: 1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+.sec1-dashboard .yt::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  z-index: 1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: hsl(348, 97%, 39%);
 }
 
 main {
