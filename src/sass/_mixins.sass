@@ -8,5 +8,24 @@
     font-weight: 700
     color: $dark-grayish-blue-txt-color
 
+@mixin card()
+    position: relative
+    width: 90%
+    border-radius: 6px
+    background: $light-grayish-blue-card-bg-color
     
+@mixin defaultContainer()
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 20px
+    padding-bottom: 30px
+
+@mixin upDefault()
+    @include pDefault
+    color: $lime-green-color
+
+@mixin downDefault()
+    @include pDefault
+    color: $bright-red-color
     

@@ -1,0 +1,58 @@
+.sec2-dashboard
+    @include defaultContainer
+
+    .cabecalho-sec2
+        padding-top: 30px
+        padding-bottom: 10px
+        width: 90%
+        
+        h2
+            font-size: 1.6em
+            font-weight: 700
+            color: $dark-grayish-blue-txt-color
+            margin-bottom: 5px
+
+    .card
+        @include card
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        gap: 35px
+        padding: 30px
+
+        .card-cabecalho
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 100%
+
+            span
+                @include pDefault
+
+            img 
+                width: 27px
+
+
+        .infos
+            @extend .card-cabecalho
+
+            .qtde
+                font-size: 2.4em
+                font-weight: 700
+                color: $very-dark-blue-txt-color
+
+            .container-porcent
+                display: flex
+                align-items: center
+                gap: 8px
+
+                img
+                    width: 11px
+
+                .up
+                    @include upDefault
+                    color: $lime-green-color
+                
+                .down
+                    @include downDefault
+                    color: $bright-red-color

@@ -1,18 +1,12 @@
 .sec1-dashboard
-    display: flex
-    flex-direction: column
-    gap: 20px
+    @include defaultContainer
 
     .card 
-        position: relative
         @include center
+        @include card
         flex-direction: column
         gap: 25px
-        width: 90%
         height: 240px
-        margin: 0 auto
-        border-radius: 10px
-        background: $light-grayish-blue-card-bg-color
 
         .container-user
             @include center
@@ -51,13 +45,12 @@
             img
                 width: 11px
 
-            span 
-                @include pDefault
-
             .up
+                @include upDefault
                 color: $lime-green-color
             
             .down
+                @include downDefault
                 color: $bright-red-color
 
     .face
@@ -69,8 +62,8 @@
             width: 100%
             height: 4px
             z-index: 1
-            border-top-left-radius: 10px
-            border-top-right-radius: 10px
+            border-top-left-radius: 8px
+            border-top-right-radius: 8px
             background: $facebook-color
     .tt
         &::before
@@ -81,8 +74,8 @@
             width: 100%
             height: 4px
             z-index: 1
-            border-top-left-radius: 10px
-            border-top-right-radius: 10px
+            border-top-left-radius: 8px
+            border-top-right-radius: 8px
             background: $twitter-color
     .insta
         &::before
@@ -93,8 +86,8 @@
             width: 100%
             height: 4px
             z-index: 1
-            border-top-left-radius: 10px
-            border-top-right-radius: 10px
+            border-top-left-radius: 8px
+            border-top-right-radius: 8px
             background: $gradient
     .yt
         &::before
@@ -105,8 +98,6 @@
             width: 100%
             height: 4px
             z-index: 1
-            border-top-left-radius: 10px
-            border-top-right-radius: 10px
+            border-top-left-radius: 8px
+            border-top-right-radius: 8px
             background: $youtube-color
-
-        
