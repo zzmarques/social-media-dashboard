@@ -121,14 +121,14 @@
   font-size: 15px;
   font-weight: 700;
   color: hsl(228, 12%, 44%);
-  color: hsl(163, 72%, 41%);
+  color: hsl(163, 72%, 41%) !important;
   color: hsl(163, 72%, 41%);
 }
 .sec1-dashboard .card .time .down {
   font-size: 15px;
   font-weight: 700;
   color: hsl(228, 12%, 44%);
-  color: hsl(356, 69%, 56%);
+  color: hsl(356, 69%, 56%) !important;
   color: hsl(356, 69%, 56%);
 }
 .sec1-dashboard .face::before {
@@ -193,7 +193,7 @@
   width: 90%;
 }
 .sec2-dashboard .cabecalho-sec2 h2 {
-  font-size: 1.6em;
+  font-size: 1.8em;
   font-weight: 700;
   color: hsl(228, 12%, 44%);
   margin-bottom: 5px;
@@ -240,21 +240,66 @@
   font-size: 15px;
   font-weight: 700;
   color: hsl(228, 12%, 44%);
-  color: hsl(163, 72%, 41%);
+  color: hsl(163, 72%, 41%) !important;
   color: hsl(163, 72%, 41%);
 }
 .sec2-dashboard .card .infos .container-porcent .down {
   font-size: 15px;
   font-weight: 700;
   color: hsl(228, 12%, 44%);
-  color: hsl(356, 69%, 56%);
+  color: hsl(356, 69%, 56%) !important;
   color: hsl(356, 69%, 56%);
 }
 
 main {
   width: 100%;
-  height: 100vh;
   background: linear-gradient(to top, hsl(0, 0%, 100%) 70%, hsl(225, 100%, 98%) 30%);
+}
+
+.dark-theme {
+  background: linear-gradient(to top, hsl(230, 17%, 14%) 70%, hsl(232, 19%, 15%) 30%) !important;
+}
+.dark-theme .cabecalho .container-txt {
+  border-bottom: 1px solid hsl(228, 28%, 20%) !important;
+}
+.dark-theme .cabecalho .container-txt h1 {
+  color: hsl(0, 0%, 100%) !important;
+}
+.dark-theme .cabecalho .container-txt span {
+  color: hsl(228, 34%, 66%) !important;
+}
+.dark-theme .cabecalho .container-dark-mode span {
+  color: hsl(228, 34%, 66%) !important;
+}
+.dark-theme .cabecalho .container-dark-mode .dark-mode-btn {
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%)) !important;
+}
+.dark-theme .cabecalho .container-dark-mode .dark-mode-btn::after {
+  background: hsl(230, 17%, 14%) !important;
+}
+.dark-theme .sec1-dashboard .card {
+  background: hsl(228, 28%, 20%) !important;
+}
+.dark-theme .sec1-dashboard .card .container-user span {
+  color: hsl(228, 34%, 66%) !important;
+}
+.dark-theme .sec1-dashboard .card .followers .qtde-follow {
+  color: hsl(0, 0%, 100%) !important;
+}
+.dark-theme .sec1-dashboard .card .followers .follow {
+  color: hsl(228, 34%, 66%) !important;
+}
+.dark-theme .sec2-dashboard .cabecalho-sec2 h2 {
+  color: hsl(0, 0%, 100%) !important;
+}
+.dark-theme .sec2-dashboard .card {
+  background: hsl(228, 28%, 20%) !important;
+}
+.dark-theme .sec2-dashboard .card .card-cabecalho span, .dark-theme .sec2-dashboard .card .infos span {
+  color: hsl(228, 34%, 66%) !important;
+}
+.dark-theme .sec2-dashboard .card .infos .qtde {
+  color: hsl(0, 0%, 100%) !important;
 }
 
 * {
