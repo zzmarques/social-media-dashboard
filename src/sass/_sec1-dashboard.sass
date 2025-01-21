@@ -1,12 +1,19 @@
 .sec1-dashboard
     @include defaultContainer
 
+    @include desktop
+        flex-direction: row
+        margin: 30px 80px 30px 80px
+        padding: 0
+    
+
     .card 
         @include center
         @include card
         flex-direction: column
         gap: 25px
         height: 240px
+        
 
         .container-user
             @include center
