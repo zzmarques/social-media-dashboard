@@ -10,7 +10,7 @@
 
 @mixin card()
     position: relative
-    width: 90%
+    width: 337px
     border-radius: 6px
     background: $light-grayish-blue-card-bg-color
     
@@ -28,4 +28,8 @@
 @mixin downDefault()
     @include pDefault
     color: $bright-red-color !important
+
+@mixin desktop()
+    @media (min-width: 1024px)
+        @content
     
