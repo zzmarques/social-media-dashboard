@@ -5,6 +5,7 @@
   width: 61px;
   height: 28px;
   border-radius: 30px;
+  transition: background 0.8s ease;
 }
 .dark-mode-btn::after {
   content: "";
@@ -16,6 +17,9 @@
   transform: translateY(-50%);
   border-radius: 50%;
   background: hsl(225, 100%, 98%);
+}
+.dark-mode-btn:hover {
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
 
 .cabecalho {
@@ -95,13 +99,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   position: relative;
   width: 337px;
   border-radius: 6px;
   background: hsl(227, 47%, 96%);
+  transition: background-color 0.5s ease-out;
   flex-direction: column;
   gap: 25px;
   height: 240px;
+}
+.sec1-dashboard .card:hover {
+  background: hsl(232, 33%, 91%);
 }
 .sec1-dashboard .card .container-user {
   display: flex;
@@ -218,10 +227,21 @@
   gap: 20px;
   padding-bottom: 30px;
 }
+@media (min-width: 1024px) {
+  .sec2-dashboard {
+    margin-inline: 80px;
+  }
+}
 .sec2-dashboard .cabecalho-sec2 {
   padding-top: 30px;
   padding-bottom: 10px;
   width: 90%;
+}
+@media (min-width: 1024px) {
+  .sec2-dashboard .cabecalho-sec2 {
+    width: 100%;
+    padding: 20px 0px 0px 0px;
+  }
 }
 .sec2-dashboard .cabecalho-sec2 h2 {
   font-size: 1.8em;
@@ -229,52 +249,76 @@
   color: hsl(228, 12%, 44%);
   margin-bottom: 5px;
 }
-.sec2-dashboard .card {
+.sec2-dashboard .container-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 90%;
+}
+@media (min-width: 1024px) {
+  .sec2-dashboard .container-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+  }
+}
+.sec2-dashboard .container-cards .card {
+  cursor: pointer;
   position: relative;
   width: 337px;
   border-radius: 6px;
   background: hsl(227, 47%, 96%);
+  transition: background-color 0.5s ease-out;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 35px;
   padding: 30px;
 }
-.sec2-dashboard .card .card-cabecalho, .sec2-dashboard .card .infos {
+.sec2-dashboard .container-cards .card:hover {
+  background: hsl(232, 33%, 91%);
+}
+@media (min-width: 1024px) {
+  .sec2-dashboard .container-cards .card {
+    width: 100%;
+  }
+}
+.sec2-dashboard .container-cards .card .card-cabecalho, .sec2-dashboard .container-cards .card .infos {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-.sec2-dashboard .card .card-cabecalho span, .sec2-dashboard .card .infos span {
+.sec2-dashboard .container-cards .card .card-cabecalho span, .sec2-dashboard .container-cards .card .infos span {
   font-size: 15px;
   font-weight: 700;
   color: hsl(228, 12%, 44%);
 }
-.sec2-dashboard .card .card-cabecalho img, .sec2-dashboard .card .infos img {
+.sec2-dashboard .container-cards .card .card-cabecalho img, .sec2-dashboard .container-cards .card .infos img {
   width: 27px;
 }
-.sec2-dashboard .card .infos .qtde {
+.sec2-dashboard .container-cards .card .infos .qtde {
   font-size: 2.4em;
   font-weight: 700;
   color: hsl(230, 17%, 14%);
 }
-.sec2-dashboard .card .infos .container-porcent {
+.sec2-dashboard .container-cards .card .infos .container-porcent {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.sec2-dashboard .card .infos .container-porcent img {
+.sec2-dashboard .container-cards .card .infos .container-porcent img {
   width: 11px;
 }
-.sec2-dashboard .card .infos .container-porcent .up {
+.sec2-dashboard .container-cards .card .infos .container-porcent .up {
   font-size: 15px;
   font-weight: 700;
   color: hsl(228, 12%, 44%);
   color: hsl(163, 72%, 41%) !important;
   color: hsl(163, 72%, 41%);
 }
-.sec2-dashboard .card .infos .container-porcent .down {
+.sec2-dashboard .container-cards .card .infos .container-porcent .down {
   font-size: 15px;
   font-weight: 700;
   color: hsl(228, 12%, 44%);
@@ -288,7 +332,7 @@ main {
 }
 @media (min-width: 1024px) {
   main {
-    background: linear-gradient(to top, hsl(0, 0%, 100%) 88%, hsl(225, 100%, 98%) 12%);
+    background: linear-gradient(to top, hsl(0, 0%, 100%) 72%, hsl(225, 100%, 98%) 28%);
   }
 }
 
@@ -316,6 +360,9 @@ main {
 .dark-theme .sec1-dashboard .card {
   background: hsl(228, 28%, 20%) !important;
 }
+.dark-theme .sec1-dashboard .card:hover {
+  background: hsl(228, 25%, 27%) !important;
+}
 .dark-theme .sec1-dashboard .card .container-user span {
   color: hsl(228, 34%, 66%) !important;
 }
@@ -331,7 +378,10 @@ main {
 .dark-theme .sec2-dashboard .card {
   background: hsl(228, 28%, 20%) !important;
 }
-.dark-theme .sec2-dashboard .card .card-cabecalho span, .dark-theme .sec2-dashboard .card .infos span {
+.dark-theme .sec2-dashboard .card:hover {
+  background: hsl(228, 25%, 27%) !important;
+}
+.dark-theme .sec2-dashboard .card .card-cabecalho span, .dark-theme .sec2-dashboard .container-cards .card .infos span {
   color: hsl(228, 34%, 66%) !important;
 }
 .dark-theme .sec2-dashboard .card .infos .qtde {
@@ -343,6 +393,11 @@ main {
   margin: 0;
   box-sizing: border-box;
   font-family: "Inter", serif;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -9,10 +9,15 @@
     color: $dark-grayish-blue-txt-color
 
 @mixin card()
+    cursor: pointer
     position: relative
     width: 337px
     border-radius: 6px
     background: $light-grayish-blue-card-bg-color
+    transition: background-color .5s ease-out
+
+    &:hover
+        background: hsl(232, 33%, 91%)
     
 @mixin defaultContainer()
     display: flex

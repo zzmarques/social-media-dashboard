@@ -5,6 +5,7 @@
     width: 61px
     height: 28px
     border-radius: 30px
+    transition: background .8s ease
 
     &::after
         content: ''
@@ -16,3 +17,6 @@
         transform: translateY(-50%)
         border-radius: 50%
         background: $very-pale-blue-bg-color
+    
+    &:hover
+        background: linear-gradient(to right, $toggle-color1, $toggle-color2)
