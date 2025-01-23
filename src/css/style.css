@@ -1,3 +1,11 @@
+@keyframes move {
+  0% {
+    right: 4px;
+  }
+  100% {
+    right: 35px;
+  }
+}
 .dark-mode-btn {
   cursor: pointer;
   position: relative;
@@ -13,13 +21,17 @@
   height: 22px;
   position: absolute;
   top: 50%;
-  right: 4px;
+  right: 35px;
   transform: translateY(-50%);
   border-radius: 50%;
   background: hsl(225, 100%, 98%);
 }
 .dark-mode-btn:hover {
   background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+.animation::after {
+  animation: move 0.5s infinite linear;
 }
 
 .cabecalho {
@@ -338,6 +350,7 @@ main {
 
 .dark-theme {
   background: linear-gradient(to top, hsl(230, 17%, 14%) 70%, hsl(232, 19%, 15%) 30%) !important;
+  transition: background-color 0.5s ease-out !important;
 }
 .dark-theme .cabecalho .container-txt {
   border-bottom: 1px solid hsl(228, 28%, 20%) !important;
