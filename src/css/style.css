@@ -369,6 +369,11 @@ main {
 .dark-theme .cabecalho .container-txt {
   border-bottom: 1px solid hsl(228, 28%, 20%) !important;
 }
+@media (min-width: 1024px) {
+  .dark-theme .cabecalho .container-txt {
+    border: 0 !important;
+  }
+}
 .dark-theme .cabecalho .container-txt h1 {
   color: hsl(0, 0%, 100%) !important;
 }
