@@ -1,3 +1,19 @@
+@keyframes move1 {
+  0% {
+    right: 4px;
+  }
+  100% {
+    right: 35px;
+  }
+}
+@keyframes move2 {
+  0% {
+    right: 35px;
+  }
+  100% {
+    right: 4px;
+  }
+}
 .dark-mode-btn {
   cursor: pointer;
   position: relative;
@@ -20,6 +36,16 @@
 }
 .dark-mode-btn:hover {
   background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+.animation-right::after {
+  animation: move1 0.5s linear;
+  right: 35px;
+}
+
+.animation-left::after {
+  animation: move2 0.5s linear;
+  right: 4px;
 }
 
 .cabecalho {

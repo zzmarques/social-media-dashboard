@@ -1,8 +1,14 @@
-@keyframes move
+@keyframes move1
     0%
         right: 4px
     100%
         right: 35px
+
+@keyframes move2
+    0%
+        right: 35px
+    100%
+        right: 4px
 
 .dark-mode-btn
     cursor: pointer
@@ -19,15 +25,20 @@
         height: 22px
         position: absolute
         top: 50%
-        right: 35px
+        right: 4px
         transform: translateY(-50%)
         border-radius: 50%
         background: $very-pale-blue-bg-color
-        // animation: move .5s infinite linear
     
     &:hover
         background: linear-gradient(to right, $toggle-color1, $toggle-color2)
 
-.animation
+.animation-right
     &::after
-        animation: move .5s infinite linear
+        animation: move1 .5s linear
+        right: 35px
+
+.animation-left
+    &::after
+        animation: move2 .5s linear
+        right: 4px
